@@ -20,11 +20,6 @@
             ta.value = "连接开启!";
         }
 
-        // socket.onopen = function (event){
-        //     var ta = document.getElementById("responseText");
-        //     ta.value = "连接开启!";
-        // }
-
         socket.onclose = function (event) {
             var ta = document.getElementById("responseText");
             ta.value = ta.value + "\n" + "连接关闭！";
