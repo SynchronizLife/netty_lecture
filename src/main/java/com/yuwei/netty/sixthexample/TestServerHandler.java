@@ -13,10 +13,14 @@ public class TestServerHandler extends SimpleChannelInboundHandler<MyDataInfo.My
             System.out.println(person.getName());
             System.out.println(person.getAge());
             System.out.println(person.getAddress());
-        }else {
+        }else if(dataType == MyDataInfo.MyMessage.DataType.DogType){
             MyDataInfo.Dog dog = msg.getDog();
             System.out.println(dog.getName());
             System.out.println(dog.getAge());
+        }else {
+            MyDataInfo.Cat cat = msg.getCat();
+            System.out.println(cat.getName());
+            System.out.println(cat.getAge());
         }
     }
 }
