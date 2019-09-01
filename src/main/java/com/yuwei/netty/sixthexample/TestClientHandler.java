@@ -12,7 +12,7 @@ public class TestClientHandler extends SimpleChannelInboundHandler<MyDataInfo.My
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
         MyDataInfo.MyMessage myMessage = null;
-        //每隔2秒向服务端发送随机产生的数据
+        //每隔2秒向服务端发送随机产生的不同类型的数据
         while (true){
             int randomInt = new Random().nextInt(3);
             Thread.sleep(2000);
