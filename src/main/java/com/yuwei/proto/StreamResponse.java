@@ -4,26 +4,26 @@
 package com.yuwei.proto;
 
 /**
- * Protobuf type {@code com.yuwei.proto.MyRequest}
+ * Protobuf type {@code com.yuwei.proto.StreamResponse}
  */
-public  final class MyRequest extends
+public  final class StreamResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.yuwei.proto.MyRequest)
-    MyRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.yuwei.proto.StreamResponse)
+    StreamResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use MyRequest.newBuilder() to construct.
-  private MyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use StreamResponse.newBuilder() to construct.
+  private StreamResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private MyRequest() {
-    username_ = "";
+  private StreamResponse() {
+    responseInfo_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new MyRequest();
+    return new StreamResponse();
   }
 
   @java.lang.Override
@@ -31,7 +31,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private MyRequest(
+  private StreamResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            username_ = s;
+            responseInfo_ = s;
             break;
           }
           default: {
@@ -76,45 +76,45 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_MyRequest_descriptor;
+    return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_StreamResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_MyRequest_fieldAccessorTable
+    return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_StreamResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.yuwei.proto.MyRequest.class, com.yuwei.proto.MyRequest.Builder.class);
+            com.yuwei.proto.StreamResponse.class, com.yuwei.proto.StreamResponse.Builder.class);
   }
 
-  public static final int USERNAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object username_;
+  public static final int RESPONSE_INFO_FIELD_NUMBER = 1;
+  private volatile java.lang.Object responseInfo_;
   /**
-   * <code>string username = 1;</code>
+   * <code>string response_info = 1;</code>
    */
-  public java.lang.String getUsername() {
-    java.lang.Object ref = username_;
+  public java.lang.String getResponseInfo() {
+    java.lang.Object ref = responseInfo_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      username_ = s;
+      responseInfo_ = s;
       return s;
     }
   }
   /**
-   * <code>string username = 1;</code>
+   * <code>string response_info = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getUsernameBytes() {
-    java.lang.Object ref = username_;
+      getResponseInfoBytes() {
+    java.lang.Object ref = responseInfo_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      username_ = b;
+      responseInfo_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -135,8 +135,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getUsernameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
+    if (!getResponseInfoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, responseInfo_);
     }
     unknownFields.writeTo(output);
   }
@@ -147,8 +147,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getUsernameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
+    if (!getResponseInfoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, responseInfo_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -160,13 +160,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.yuwei.proto.MyRequest)) {
+    if (!(obj instanceof com.yuwei.proto.StreamResponse)) {
       return super.equals(obj);
     }
-    com.yuwei.proto.MyRequest other = (com.yuwei.proto.MyRequest) obj;
+    com.yuwei.proto.StreamResponse other = (com.yuwei.proto.StreamResponse) obj;
 
-    if (!getUsername()
-        .equals(other.getUsername())) return false;
+    if (!getResponseInfo()
+        .equals(other.getResponseInfo())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -178,76 +178,76 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + USERNAME_FIELD_NUMBER;
-    hash = (53 * hash) + getUsername().hashCode();
+    hash = (37 * hash) + RESPONSE_INFO_FIELD_NUMBER;
+    hash = (53 * hash) + getResponseInfo().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(byte[] data)
+  public static com.yuwei.proto.StreamResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(java.io.InputStream input)
+  public static com.yuwei.proto.StreamResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.yuwei.proto.MyRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.yuwei.proto.StreamResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.yuwei.proto.MyRequest parseDelimitedFrom(
+  public static com.yuwei.proto.StreamResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.yuwei.proto.MyRequest parseFrom(
+  public static com.yuwei.proto.StreamResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.yuwei.proto.MyRequest prototype) {
+  public static Builder newBuilder(com.yuwei.proto.StreamResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -276,26 +276,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.yuwei.proto.MyRequest}
+   * Protobuf type {@code com.yuwei.proto.StreamResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.yuwei.proto.MyRequest)
-      com.yuwei.proto.MyRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.yuwei.proto.StreamResponse)
+      com.yuwei.proto.StreamResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_MyRequest_descriptor;
+      return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_StreamResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_MyRequest_fieldAccessorTable
+      return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_StreamResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.yuwei.proto.MyRequest.class, com.yuwei.proto.MyRequest.Builder.class);
+              com.yuwei.proto.StreamResponse.class, com.yuwei.proto.StreamResponse.Builder.class);
     }
 
-    // Construct using com.yuwei.proto.MyRequest.newBuilder()
+    // Construct using com.yuwei.proto.StreamResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -313,7 +313,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      username_ = "";
+      responseInfo_ = "";
 
       return this;
     }
@@ -321,17 +321,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_MyRequest_descriptor;
+      return com.yuwei.proto.StudentProto.internal_static_com_yuwei_proto_StreamResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.yuwei.proto.MyRequest getDefaultInstanceForType() {
-      return com.yuwei.proto.MyRequest.getDefaultInstance();
+    public com.yuwei.proto.StreamResponse getDefaultInstanceForType() {
+      return com.yuwei.proto.StreamResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.yuwei.proto.MyRequest build() {
-      com.yuwei.proto.MyRequest result = buildPartial();
+    public com.yuwei.proto.StreamResponse build() {
+      com.yuwei.proto.StreamResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -339,9 +339,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.yuwei.proto.MyRequest buildPartial() {
-      com.yuwei.proto.MyRequest result = new com.yuwei.proto.MyRequest(this);
-      result.username_ = username_;
+    public com.yuwei.proto.StreamResponse buildPartial() {
+      com.yuwei.proto.StreamResponse result = new com.yuwei.proto.StreamResponse(this);
+      result.responseInfo_ = responseInfo_;
       onBuilt();
       return result;
     }
@@ -380,18 +380,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.yuwei.proto.MyRequest) {
-        return mergeFrom((com.yuwei.proto.MyRequest)other);
+      if (other instanceof com.yuwei.proto.StreamResponse) {
+        return mergeFrom((com.yuwei.proto.StreamResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.yuwei.proto.MyRequest other) {
-      if (other == com.yuwei.proto.MyRequest.getDefaultInstance()) return this;
-      if (!other.getUsername().isEmpty()) {
-        username_ = other.username_;
+    public Builder mergeFrom(com.yuwei.proto.StreamResponse other) {
+      if (other == com.yuwei.proto.StreamResponse.getDefaultInstance()) return this;
+      if (!other.getResponseInfo().isEmpty()) {
+        responseInfo_ = other.responseInfo_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -409,11 +409,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.yuwei.proto.MyRequest parsedMessage = null;
+      com.yuwei.proto.StreamResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.yuwei.proto.MyRequest) e.getUnfinishedMessage();
+        parsedMessage = (com.yuwei.proto.StreamResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -423,71 +423,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object username_ = "";
+    private java.lang.Object responseInfo_ = "";
     /**
-     * <code>string username = 1;</code>
+     * <code>string response_info = 1;</code>
      */
-    public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
+    public java.lang.String getResponseInfo() {
+      java.lang.Object ref = responseInfo_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        username_ = s;
+        responseInfo_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string username = 1;</code>
+     * <code>string response_info = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getUsernameBytes() {
-      java.lang.Object ref = username_;
+        getResponseInfoBytes() {
+      java.lang.Object ref = responseInfo_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        username_ = b;
+        responseInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string username = 1;</code>
+     * <code>string response_info = 1;</code>
      */
-    public Builder setUsername(
+    public Builder setResponseInfo(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      username_ = value;
+      responseInfo_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string username = 1;</code>
+     * <code>string response_info = 1;</code>
      */
-    public Builder clearUsername() {
+    public Builder clearResponseInfo() {
       
-      username_ = getDefaultInstance().getUsername();
+      responseInfo_ = getDefaultInstance().getResponseInfo();
       onChanged();
       return this;
     }
     /**
-     * <code>string username = 1;</code>
+     * <code>string response_info = 1;</code>
      */
-    public Builder setUsernameBytes(
+    public Builder setResponseInfoBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      username_ = value;
+      responseInfo_ = value;
       onChanged();
       return this;
     }
@@ -504,41 +504,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.yuwei.proto.MyRequest)
+    // @@protoc_insertion_point(builder_scope:com.yuwei.proto.StreamResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.yuwei.proto.MyRequest)
-  private static final com.yuwei.proto.MyRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.yuwei.proto.StreamResponse)
+  private static final com.yuwei.proto.StreamResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.yuwei.proto.MyRequest();
+    DEFAULT_INSTANCE = new com.yuwei.proto.StreamResponse();
   }
 
-  public static com.yuwei.proto.MyRequest getDefaultInstance() {
+  public static com.yuwei.proto.StreamResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<MyRequest>
-      PARSER = new com.google.protobuf.AbstractParser<MyRequest>() {
+  private static final com.google.protobuf.Parser<StreamResponse>
+      PARSER = new com.google.protobuf.AbstractParser<StreamResponse>() {
     @java.lang.Override
-    public MyRequest parsePartialFrom(
+    public StreamResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MyRequest(input, extensionRegistry);
+      return new StreamResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<MyRequest> parser() {
+  public static com.google.protobuf.Parser<StreamResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<MyRequest> getParserForType() {
+  public com.google.protobuf.Parser<StreamResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.yuwei.proto.MyRequest getDefaultInstanceForType() {
+  public com.yuwei.proto.StreamResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

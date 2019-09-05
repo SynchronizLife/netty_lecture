@@ -3,6 +3,8 @@ package com.yuwei.grpc;
 import com.yuwei.proto.*;
 import io.grpc.stub.StreamObserver;
 
+import java.util.UUID;
+
 /**
  * Created:  Y.w
  * Date: 2019-09-04
@@ -56,6 +58,29 @@ public class StudentServiceImpl extends StudentServiceGrpc.StudentServiceImplBas
                         .addStudentResponse(studentResponse1)
                         .addStudentResponse(studentResponse2).build();
                 responseObserver.onNext(studentResponseList);
+                responseObserver.onCompleted();
+            }
+        };
+    }
+
+    @Override
+    public StreamObserver<StreamRequest> biTalk(StreamObserver<StreamResponse> responseObserver) {
+        return new StreamObserver<StreamRequest>() {
+            @Override
+            public void onNext(StreamRequest value) {
+                System.out.println(value.getRequestInfo());
+                responseObserver.onNext(StreamResponse.newBuilder()
+                        .setResponseInfo(UUID.randomUUID().toString())
+                        .build());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                System.out.println(t.getMessage());
+            }
+
+            @Override
+            public void onCompleted() {
                 responseObserver.onCompleted();
             }
         };

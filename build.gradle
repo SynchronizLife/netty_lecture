@@ -38,9 +38,15 @@ dependencies {
     )
 }
 
+//编译JAVA文件时采用UTF-8
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
 
 protobuf {
-    protoc {
+    generatedFilesBaseDir = 'src'
+        protoc {
         artifact = "com.google.protobuf:protoc:3.9.0"
     }
     plugins {
@@ -50,7 +56,9 @@ protobuf {
     }
     generateProtoTasks {
         all()*.plugins {
-            grpc {}
+            grpc {
+                outputSubDir = 'java'
+            }
         }
     }
 }

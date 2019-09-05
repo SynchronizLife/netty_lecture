@@ -27,29 +27,29 @@ public final class StudentServiceGrpc {
   public static final String SERVICE_NAME = "com.yuwei.proto.StudentService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<MyRequest,
-      MyResponse> getGetRealNameByUsernameMethod;
+  private static volatile io.grpc.MethodDescriptor<com.yuwei.proto.MyRequest,
+      com.yuwei.proto.MyResponse> getGetRealNameByUsernameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetRealNameByUsername",
-      requestType = MyRequest.class,
-      responseType = MyResponse.class,
+      requestType = com.yuwei.proto.MyRequest.class,
+      responseType = com.yuwei.proto.MyResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<MyRequest,
-      MyResponse> getGetRealNameByUsernameMethod() {
-    io.grpc.MethodDescriptor<MyRequest, MyResponse> getGetRealNameByUsernameMethod;
+  public static io.grpc.MethodDescriptor<com.yuwei.proto.MyRequest,
+      com.yuwei.proto.MyResponse> getGetRealNameByUsernameMethod() {
+    io.grpc.MethodDescriptor<com.yuwei.proto.MyRequest, com.yuwei.proto.MyResponse> getGetRealNameByUsernameMethod;
     if ((getGetRealNameByUsernameMethod = StudentServiceGrpc.getGetRealNameByUsernameMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getGetRealNameByUsernameMethod = StudentServiceGrpc.getGetRealNameByUsernameMethod) == null) {
           StudentServiceGrpc.getGetRealNameByUsernameMethod = getGetRealNameByUsernameMethod =
-              io.grpc.MethodDescriptor.<MyRequest, MyResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.yuwei.proto.MyRequest, com.yuwei.proto.MyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRealNameByUsername"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MyRequest.getDefaultInstance()))
+                  com.yuwei.proto.MyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MyResponse.getDefaultInstance()))
+                  com.yuwei.proto.MyResponse.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetRealNameByUsername"))
               .build();
         }
@@ -58,29 +58,29 @@ public final class StudentServiceGrpc {
     return getGetRealNameByUsernameMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<StudentRequest,
-      StudentResponse> getGetStudentsByAgeMethod;
+  private static volatile io.grpc.MethodDescriptor<com.yuwei.proto.StudentRequest,
+      com.yuwei.proto.StudentResponse> getGetStudentsByAgeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetStudentsByAge",
-      requestType = StudentRequest.class,
-      responseType = StudentResponse.class,
+      requestType = com.yuwei.proto.StudentRequest.class,
+      responseType = com.yuwei.proto.StudentResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<StudentRequest,
-      StudentResponse> getGetStudentsByAgeMethod() {
-    io.grpc.MethodDescriptor<StudentRequest, StudentResponse> getGetStudentsByAgeMethod;
+  public static io.grpc.MethodDescriptor<com.yuwei.proto.StudentRequest,
+      com.yuwei.proto.StudentResponse> getGetStudentsByAgeMethod() {
+    io.grpc.MethodDescriptor<com.yuwei.proto.StudentRequest, com.yuwei.proto.StudentResponse> getGetStudentsByAgeMethod;
     if ((getGetStudentsByAgeMethod = StudentServiceGrpc.getGetStudentsByAgeMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getGetStudentsByAgeMethod = StudentServiceGrpc.getGetStudentsByAgeMethod) == null) {
           StudentServiceGrpc.getGetStudentsByAgeMethod = getGetStudentsByAgeMethod =
-              io.grpc.MethodDescriptor.<StudentRequest, StudentResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.yuwei.proto.StudentRequest, com.yuwei.proto.StudentResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStudentsByAge"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  StudentRequest.getDefaultInstance()))
+                  com.yuwei.proto.StudentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  StudentResponse.getDefaultInstance()))
+                  com.yuwei.proto.StudentResponse.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetStudentsByAge"))
               .build();
         }
@@ -89,35 +89,66 @@ public final class StudentServiceGrpc {
     return getGetStudentsByAgeMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<StudentRequest,
-      StudentResponseList> getGetStudentWrapperByAgesMethod;
+  private static volatile io.grpc.MethodDescriptor<com.yuwei.proto.StudentRequest,
+      com.yuwei.proto.StudentResponseList> getGetStudentWrapperByAgesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetStudentWrapperByAges",
-      requestType = StudentRequest.class,
-      responseType = StudentResponseList.class,
+      requestType = com.yuwei.proto.StudentRequest.class,
+      responseType = com.yuwei.proto.StudentResponseList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<StudentRequest,
-      StudentResponseList> getGetStudentWrapperByAgesMethod() {
-    io.grpc.MethodDescriptor<StudentRequest, StudentResponseList> getGetStudentWrapperByAgesMethod;
+  public static io.grpc.MethodDescriptor<com.yuwei.proto.StudentRequest,
+      com.yuwei.proto.StudentResponseList> getGetStudentWrapperByAgesMethod() {
+    io.grpc.MethodDescriptor<com.yuwei.proto.StudentRequest, com.yuwei.proto.StudentResponseList> getGetStudentWrapperByAgesMethod;
     if ((getGetStudentWrapperByAgesMethod = StudentServiceGrpc.getGetStudentWrapperByAgesMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getGetStudentWrapperByAgesMethod = StudentServiceGrpc.getGetStudentWrapperByAgesMethod) == null) {
           StudentServiceGrpc.getGetStudentWrapperByAgesMethod = getGetStudentWrapperByAgesMethod =
-              io.grpc.MethodDescriptor.<StudentRequest, StudentResponseList>newBuilder()
+              io.grpc.MethodDescriptor.<com.yuwei.proto.StudentRequest, com.yuwei.proto.StudentResponseList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStudentWrapperByAges"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  StudentRequest.getDefaultInstance()))
+                  com.yuwei.proto.StudentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  StudentResponseList.getDefaultInstance()))
+                  com.yuwei.proto.StudentResponseList.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetStudentWrapperByAges"))
               .build();
         }
       }
     }
     return getGetStudentWrapperByAgesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.yuwei.proto.StreamRequest,
+      com.yuwei.proto.StreamResponse> getBiTalkMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BiTalk",
+      requestType = com.yuwei.proto.StreamRequest.class,
+      responseType = com.yuwei.proto.StreamResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.yuwei.proto.StreamRequest,
+      com.yuwei.proto.StreamResponse> getBiTalkMethod() {
+    io.grpc.MethodDescriptor<com.yuwei.proto.StreamRequest, com.yuwei.proto.StreamResponse> getBiTalkMethod;
+    if ((getBiTalkMethod = StudentServiceGrpc.getBiTalkMethod) == null) {
+      synchronized (StudentServiceGrpc.class) {
+        if ((getBiTalkMethod = StudentServiceGrpc.getBiTalkMethod) == null) {
+          StudentServiceGrpc.getBiTalkMethod = getBiTalkMethod =
+              io.grpc.MethodDescriptor.<com.yuwei.proto.StreamRequest, com.yuwei.proto.StreamResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BiTalk"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.yuwei.proto.StreamRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.yuwei.proto.StreamResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("BiTalk"))
+              .build();
+        }
+      }
+    }
+    return getBiTalkMethod;
   }
 
   /**
@@ -149,48 +180,62 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUsername(MyRequest request,
-        io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
+    public void getRealNameByUsername(com.yuwei.proto.MyRequest request,
+        io.grpc.stub.StreamObserver<com.yuwei.proto.MyResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetRealNameByUsernameMethod(), responseObserver);
     }
 
     /**
      */
-    public void getStudentsByAge(StudentRequest request,
-        io.grpc.stub.StreamObserver<StudentResponse> responseObserver) {
+    public void getStudentsByAge(com.yuwei.proto.StudentRequest request,
+        io.grpc.stub.StreamObserver<com.yuwei.proto.StudentResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetStudentsByAgeMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<StudentRequest> getStudentWrapperByAges(
-        io.grpc.stub.StreamObserver<StudentResponseList> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.yuwei.proto.StudentRequest> getStudentWrapperByAges(
+        io.grpc.stub.StreamObserver<com.yuwei.proto.StudentResponseList> responseObserver) {
       return asyncUnimplementedStreamingCall(getGetStudentWrapperByAgesMethod(), responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.yuwei.proto.StreamRequest> biTalk(
+        io.grpc.stub.StreamObserver<com.yuwei.proto.StreamResponse> responseObserver) {
+      return asyncUnimplementedStreamingCall(getBiTalkMethod(), responseObserver);
+    }
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetRealNameByUsernameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                MyRequest,
-                MyResponse>(
+                com.yuwei.proto.MyRequest,
+                com.yuwei.proto.MyResponse>(
                   this, METHODID_GET_REAL_NAME_BY_USERNAME)))
           .addMethod(
             getGetStudentsByAgeMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
-                StudentRequest,
-                StudentResponse>(
+                com.yuwei.proto.StudentRequest,
+                com.yuwei.proto.StudentResponse>(
                   this, METHODID_GET_STUDENTS_BY_AGE)))
           .addMethod(
             getGetStudentWrapperByAgesMethod(),
             asyncClientStreamingCall(
               new MethodHandlers<
-                StudentRequest,
-                StudentResponseList>(
+                com.yuwei.proto.StudentRequest,
+                com.yuwei.proto.StudentResponseList>(
                   this, METHODID_GET_STUDENT_WRAPPER_BY_AGES)))
+          .addMethod(
+            getBiTalkMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                com.yuwei.proto.StreamRequest,
+                com.yuwei.proto.StreamResponse>(
+                  this, METHODID_BI_TALK)))
           .build();
     }
   }
@@ -207,7 +252,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected StudentServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new StudentServiceStub(channel, callOptions);
@@ -215,26 +260,34 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUsername(MyRequest request,
-        io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
+    public void getRealNameByUsername(com.yuwei.proto.MyRequest request,
+        io.grpc.stub.StreamObserver<com.yuwei.proto.MyResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetRealNameByUsernameMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getStudentsByAge(StudentRequest request,
-        io.grpc.stub.StreamObserver<StudentResponse> responseObserver) {
+    public void getStudentsByAge(com.yuwei.proto.StudentRequest request,
+        io.grpc.stub.StreamObserver<com.yuwei.proto.StudentResponse> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(getGetStudentsByAgeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<StudentRequest> getStudentWrapperByAges(
-        io.grpc.stub.StreamObserver<StudentResponseList> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.yuwei.proto.StudentRequest> getStudentWrapperByAges(
+        io.grpc.stub.StreamObserver<com.yuwei.proto.StudentResponseList> responseObserver) {
       return asyncClientStreamingCall(
           getChannel().newCall(getGetStudentWrapperByAgesMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.yuwei.proto.StreamRequest> biTalk(
+        io.grpc.stub.StreamObserver<com.yuwei.proto.StreamResponse> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getBiTalkMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -250,7 +303,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected StudentServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new StudentServiceBlockingStub(channel, callOptions);
@@ -258,15 +311,15 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public MyResponse getRealNameByUsername(MyRequest request) {
+    public com.yuwei.proto.MyResponse getRealNameByUsername(com.yuwei.proto.MyRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetRealNameByUsernameMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public java.util.Iterator<StudentResponse> getStudentsByAge(
-        StudentRequest request) {
+    public java.util.Iterator<com.yuwei.proto.StudentResponse> getStudentsByAge(
+        com.yuwei.proto.StudentRequest request) {
       return blockingServerStreamingCall(
           getChannel(), getGetStudentsByAgeMethod(), getCallOptions(), request);
     }
@@ -284,7 +337,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected StudentServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new StudentServiceFutureStub(channel, callOptions);
@@ -292,8 +345,8 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<MyResponse> getRealNameByUsername(
-        MyRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.yuwei.proto.MyResponse> getRealNameByUsername(
+        com.yuwei.proto.MyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetRealNameByUsernameMethod(), getCallOptions()), request);
     }
@@ -302,6 +355,7 @@ public final class StudentServiceGrpc {
   private static final int METHODID_GET_REAL_NAME_BY_USERNAME = 0;
   private static final int METHODID_GET_STUDENTS_BY_AGE = 1;
   private static final int METHODID_GET_STUDENT_WRAPPER_BY_AGES = 2;
+  private static final int METHODID_BI_TALK = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -316,31 +370,34 @@ public final class StudentServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_REAL_NAME_BY_USERNAME:
-          serviceImpl.getRealNameByUsername((MyRequest) request,
-              (io.grpc.stub.StreamObserver<MyResponse>) responseObserver);
+          serviceImpl.getRealNameByUsername((com.yuwei.proto.MyRequest) request,
+              (io.grpc.stub.StreamObserver<com.yuwei.proto.MyResponse>) responseObserver);
           break;
         case METHODID_GET_STUDENTS_BY_AGE:
-          serviceImpl.getStudentsByAge((StudentRequest) request,
-              (io.grpc.stub.StreamObserver<StudentResponse>) responseObserver);
+          serviceImpl.getStudentsByAge((com.yuwei.proto.StudentRequest) request,
+              (io.grpc.stub.StreamObserver<com.yuwei.proto.StudentResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_STUDENT_WRAPPER_BY_AGES:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getStudentWrapperByAges(
-              (io.grpc.stub.StreamObserver<StudentResponseList>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.yuwei.proto.StudentResponseList>) responseObserver);
+        case METHODID_BI_TALK:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.biTalk(
+              (io.grpc.stub.StreamObserver<com.yuwei.proto.StreamResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -351,12 +408,12 @@ public final class StudentServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     StudentServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return StudentProto.getDescriptor();
+      return com.yuwei.proto.StudentProto.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("StudentService");
     }
@@ -376,7 +433,7 @@ public final class StudentServiceGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
@@ -395,6 +452,7 @@ public final class StudentServiceGrpc {
               .addMethod(getGetRealNameByUsernameMethod())
               .addMethod(getGetStudentsByAgeMethod())
               .addMethod(getGetStudentWrapperByAgesMethod())
+              .addMethod(getBiTalkMethod())
               .build();
         }
       }
