@@ -15,6 +15,19 @@ public final class StudentProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+<<<<<<< HEAD
+=======
+    internal_static_com_yuwei_proto_StreamRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_yuwei_proto_StreamRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_yuwei_proto_StreamResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_yuwei_proto_StreamResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+>>>>>>> refs/remotes/origin/master
     internal_static_com_yuwei_proto_MyRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24,6 +37,24 @@ public final class StudentProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_yuwei_proto_MyResponse_fieldAccessorTable;
+<<<<<<< HEAD
+=======
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_yuwei_proto_StudentRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_yuwei_proto_StudentRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_yuwei_proto_StudentResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_yuwei_proto_StudentResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_yuwei_proto_StudentResponseList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_yuwei_proto_StudentResponseList_fieldAccessorTable;
+>>>>>>> refs/remotes/origin/master
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,29 +64,94 @@ public final class StudentProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
+<<<<<<< HEAD
       "\n\rStudent.proto\022\017com.yuwei.proto\"\035\n\tMyRe" +
       "quest\022\020\n\010username\030\001 \001(\t\"\036\n\nMyResponse\022\020\n" +
       "\010realname\030\001 \001(\t2d\n\016StudentService\022R\n\025Get" +
       "RealNameByUsername\022\032.com.yuwei.proto.MyR" +
       "equest\032\033.com.yuwei.proto.MyResponse\"\000B!\n" +
       "\017com.yuwei.protoB\014StudentProtoP\001b\006proto3"
+=======
+      "\n\rStudent.proto\022\017com.yuwei.proto\"%\n\rStre" +
+      "amRequest\022\024\n\014request_info\030\001 \001(\t\"\'\n\016Strea" +
+      "mResponse\022\025\n\rresponse_info\030\001 \001(\t\"\035\n\tMyRe" +
+      "quest\022\020\n\010username\030\001 \001(\t\"\036\n\nMyResponse\022\020\n" +
+      "\010realname\030\002 \001(\t\"\035\n\016StudentRequest\022\013\n\003age" +
+      "\030\001 \001(\005\":\n\017StudentResponse\022\014\n\004name\030\001 \001(\t\022" +
+      "\013\n\003age\030\002 \001(\005\022\014\n\004city\030\003 \001(\t\"P\n\023StudentRes" +
+      "ponseList\0229\n\017studentResponse\030\001 \003(\0132 .com" +
+      ".yuwei.proto.StudentResponse2\366\002\n\016Student" +
+      "Service\022R\n\025GetRealNameByUsername\022\032.com.y" +
+      "uwei.proto.MyRequest\032\033.com.yuwei.proto.M" +
+      "yResponse\"\000\022Y\n\020GetStudentsByAge\022\037.com.yu" +
+      "wei.proto.StudentRequest\032 .com.yuwei.pro" +
+      "to.StudentResponse\"\0000\001\022d\n\027GetStudentWrap" +
+      "perByAges\022\037.com.yuwei.proto.StudentReque" +
+      "st\032$.com.yuwei.proto.StudentResponseList" +
+      "\"\000(\001\022O\n\006BiTalk\022\036.com.yuwei.proto.StreamR" +
+      "equest\032\037.com.yuwei.proto.StreamResponse\"" +
+      "\000(\0010\001B!\n\017com.yuwei.protoB\014StudentProtoP\001" +
+      "b\006proto3"
+>>>>>>> refs/remotes/origin/master
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
+<<<<<<< HEAD
     internal_static_com_yuwei_proto_MyRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+=======
+    internal_static_com_yuwei_proto_StreamRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_com_yuwei_proto_StreamRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_yuwei_proto_StreamRequest_descriptor,
+        new java.lang.String[] { "RequestInfo", });
+    internal_static_com_yuwei_proto_StreamResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_yuwei_proto_StreamResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_yuwei_proto_StreamResponse_descriptor,
+        new java.lang.String[] { "ResponseInfo", });
+    internal_static_com_yuwei_proto_MyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+>>>>>>> refs/remotes/origin/master
     internal_static_com_yuwei_proto_MyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_yuwei_proto_MyRequest_descriptor,
         new java.lang.String[] { "Username", });
     internal_static_com_yuwei_proto_MyResponse_descriptor =
+<<<<<<< HEAD
       getDescriptor().getMessageTypes().get(1);
+=======
+      getDescriptor().getMessageTypes().get(3);
+>>>>>>> refs/remotes/origin/master
     internal_static_com_yuwei_proto_MyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_yuwei_proto_MyResponse_descriptor,
         new java.lang.String[] { "Realname", });
+<<<<<<< HEAD
+=======
+    internal_static_com_yuwei_proto_StudentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_yuwei_proto_StudentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_yuwei_proto_StudentRequest_descriptor,
+        new java.lang.String[] { "Age", });
+    internal_static_com_yuwei_proto_StudentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_yuwei_proto_StudentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_yuwei_proto_StudentResponse_descriptor,
+        new java.lang.String[] { "Name", "Age", "City", });
+    internal_static_com_yuwei_proto_StudentResponseList_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_yuwei_proto_StudentResponseList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_yuwei_proto_StudentResponseList_descriptor,
+        new java.lang.String[] { "StudentResponse", });
+>>>>>>> refs/remotes/origin/master
   }
 
   // @@protoc_insertion_point(outer_class_scope)
