@@ -49,11 +49,7 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-<<<<<<< HEAD
-          case 10: {
-=======
           case 18: {
->>>>>>> refs/remotes/origin/master
             java.lang.String s = input.readStringRequireUtf8();
 
             realname_ = s;
@@ -91,17 +87,10 @@ private static final long serialVersionUID = 0L;
             com.yuwei.proto.MyResponse.class, com.yuwei.proto.MyResponse.Builder.class);
   }
 
-<<<<<<< HEAD
-  public static final int REALNAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object realname_;
-  /**
-   * <code>string realname = 1;</code>
-=======
   public static final int REALNAME_FIELD_NUMBER = 2;
   private volatile java.lang.Object realname_;
   /**
    * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
    */
   public java.lang.String getRealname() {
     java.lang.Object ref = realname_;
@@ -116,11 +105,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-<<<<<<< HEAD
-   * <code>string realname = 1;</code>
-=======
    * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
    */
   public com.google.protobuf.ByteString
       getRealnameBytes() {
@@ -151,11 +136,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getRealnameBytes().isEmpty()) {
-<<<<<<< HEAD
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, realname_);
-=======
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, realname_);
->>>>>>> refs/remotes/origin/master
     }
     unknownFields.writeTo(output);
   }
@@ -167,11 +148,7 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (!getRealnameBytes().isEmpty()) {
-<<<<<<< HEAD
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, realname_);
-=======
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, realname_);
->>>>>>> refs/remotes/origin/master
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -448,11 +425,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object realname_ = "";
     /**
-<<<<<<< HEAD
-     * <code>string realname = 1;</code>
-=======
      * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
      */
     public java.lang.String getRealname() {
       java.lang.Object ref = realname_;
@@ -467,11 +440,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-<<<<<<< HEAD
-     * <code>string realname = 1;</code>
-=======
      * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
      */
     public com.google.protobuf.ByteString
         getRealnameBytes() {
@@ -487,11 +456,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-<<<<<<< HEAD
-     * <code>string realname = 1;</code>
-=======
      * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
      */
     public Builder setRealname(
         java.lang.String value) {
@@ -504,11 +469,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-<<<<<<< HEAD
-     * <code>string realname = 1;</code>
-=======
      * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
      */
     public Builder clearRealname() {
       
@@ -517,11 +478,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-<<<<<<< HEAD
-     * <code>string realname = 1;</code>
-=======
      * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
      */
     public Builder setRealnameBytes(
         com.google.protobuf.ByteString value) {

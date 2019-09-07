@@ -8,19 +8,11 @@ public interface MyResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-<<<<<<< HEAD
-   * <code>string realname = 1;</code>
-   */
-  java.lang.String getRealname();
-  /**
-   * <code>string realname = 1;</code>
-=======
    * <code>string realname = 2;</code>
    */
   java.lang.String getRealname();
   /**
    * <code>string realname = 2;</code>
->>>>>>> refs/remotes/origin/master
    */
   com.google.protobuf.ByteString
       getRealnameBytes();
