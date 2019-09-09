@@ -20,5 +20,8 @@ public class NioTest10 {
 
         System.out.println("valid: " + fileLock.isValid());
         System.out.println("lock type: " + fileLock.isShared());
+
+        fileLock.release();
+        randomAccessFile.close();
     }
 }
