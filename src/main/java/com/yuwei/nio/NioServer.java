@@ -58,7 +58,13 @@ public class NioServer {
                             client = (SocketChannel)selectionKey.channel();
                             ByteBuffer readBuffer = ByteBuffer.allocate(1024);
 
-                            int count = client.read(readBuffer);
+                            int count = 0;
+                            try {
+                                count = client.read(readBuffer);
+                            } catch (IOException e) {
+                                //客户端断开后，需要手动关闭channel
+                                client.close();
+                            }
 
                             if(count > 0){
                                 readBuffer.flip();
