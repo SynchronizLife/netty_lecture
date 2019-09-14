@@ -81,6 +81,7 @@ public class NioClient {
                         }
                     }
                 }
+                //清除selectionKeys
                 selectionKeys.clear();
             }
         } catch (IOException e) {
