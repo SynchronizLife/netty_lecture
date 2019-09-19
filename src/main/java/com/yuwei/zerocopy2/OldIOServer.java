@@ -1,38 +1,35 @@
 package com.yuwei.zerocopy2;
 
-import java.io.DataOutputStream;
-import java.io.FileInputStream;
-import java.io.InputStream;
+import java.io.DataInputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
  * @author ：y.w
- * @date ：Created in 2019/9/18 21:28
- * @description：
+ * @date ：Created in 2019/9/18 21:24
+ * @description：传统IO服务器
  */
 public class OldIOServer {
     public static void main(String[] args)throws Exception{
-        Socket socket = new Socket("localhost",8899);
+        ServerSocket serverSocket = new ServerSocket(8899);
 
-        String fileName = "E:\\soft-dev\\soft-setup\\zip-tar-gz\\gradle-3.5-all.zip";
-        InputStream inputStream = new FileInputStream(fileName);
+        while(true){
+            Socket socket = serverSocket.accept();
+            DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
 
-        DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+            try{
+                byte[] byteArray = new byte[4096];
 
-        byte[] buffer = new byte[4096];
-        long readCout;
-        long total = 0;
+                while (true){
+                    int readCount = dataInputStream.read(byteArray,0,byteArray.length);
 
-        long startTime = System.currentTimeMillis();
-
-        while ((readCout = inputStream.read(buffer)) >= 0){
-            total += readCout;
-            dataOutputStream.write(buffer);
+                    if(-1 == readCount){
+                        break;
+                    }
+                }
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
         }
-        System.out.println("发送总字节数：" + total + " ,耗时：" + (System.currentTimeMillis() - startTime));
-
-        dataOutputStream.close();
-        socket.close();
-        inputStream.close();
     }
 }

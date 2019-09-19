@@ -8,17 +8,17 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class MyServer {
     public static void main(String[] args) throws InterruptedException {
-        EventLoopGroup bossgroup = new NioEventLoopGroup();
+        EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workGroup = new NioEventLoopGroup();
 
         try{
             ServerBootstrap serverBootstrap = new ServerBootstrap();
-            serverBootstrap.group(bossgroup,workGroup).channel(NioServerSocketChannel.class)
+            serverBootstrap.group(bossGroup,workGroup).channel(NioServerSocketChannel.class)
                     .childHandler(new MyServerInitializer());
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();
         }finally {
-            bossgroup.shutdownGracefully();
+            bossGroup.shutdownGracefully();
             workGroup.shutdownGracefully();
         }
     }

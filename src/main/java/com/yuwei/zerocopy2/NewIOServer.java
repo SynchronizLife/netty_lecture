@@ -28,7 +28,7 @@ public class NewIOServer {
 
             int readCount = 0;
 
-            while (-1 == readCount){
+            while (-1 != readCount){
                 try{
                     readCount = socketChannel.read(byteBuffer);
                 }catch (Exception ex){
