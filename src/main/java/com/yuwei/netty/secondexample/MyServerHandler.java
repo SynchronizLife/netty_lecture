@@ -1,7 +1,9 @@
 package com.yuwei.netty.secondexample;
 
+import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.util.UUID;
 
@@ -17,5 +19,14 @@ public class MyServerHandler extends SimpleChannelInboundHandler<String> {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
         ctx.close();
+    }
+
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        Bootstrap bootstrap = new Bootstrap();
+        //同时作为服务器端和客户端，channel共用同一个EventLoop
+        bootstrap.group(ctx.channel().eventLoop()).channel(NioSocketChannel.class).handler(new MyClientInitializer());
+        bootstrap.connect("localhost",8899);
     }
 }
